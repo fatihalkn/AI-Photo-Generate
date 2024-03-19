@@ -24,6 +24,8 @@
 		3D763BA22BA9EA6E00E0D032 /* SelectStyleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763BA12BA9EA6E00E0D032 /* SelectStyleCell.swift */; };
 		3D763BA42BA9EEEC00E0D032 /* StyleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763BA32BA9EEEC00E0D032 /* StyleModel.swift */; };
 		3D763BA72BA9F9C000E0D032 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763BA62BA9F9C000E0D032 /* TabBarController.swift */; };
+		3D763BA92BAA312E00E0D032 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763BA82BAA312E00E0D032 /* HomeViewModel.swift */; };
+		3D763BAD2BAA316800E0D032 /* GenarateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763BAC2BAA316800E0D032 /* GenarateController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		3D763BA12BA9EA6E00E0D032 /* SelectStyleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectStyleCell.swift; sourceTree = "<group>"; };
 		3D763BA32BA9EEEC00E0D032 /* StyleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleModel.swift; sourceTree = "<group>"; };
 		3D763BA62BA9F9C000E0D032 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		3D763BA82BAA312E00E0D032 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		3D763BAC2BAA316800E0D032 /* GenarateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenarateController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,7 +172,8 @@
 		3D763B982BA8D3B800E0D032 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				3D763B992BA8D3B800E0D032 /* HomePageController.swift */,
+				3D763BAB2BAA315800E0D032 /* Genarate */,
+				3D763BAA2BAA314200E0D032 /* İnspiration */,
 			);
 			name = Scene;
 			path = ../../../TextToPhoto/TextToPhoto/Scene;
@@ -188,6 +193,24 @@
 				3D763BA62BA9F9C000E0D032 /* TabBarController.swift */,
 			);
 			path = CustomTabBar;
+			sourceTree = "<group>";
+		};
+		3D763BAA2BAA314200E0D032 /* İnspiration */ = {
+			isa = PBXGroup;
+			children = (
+				3D763B992BA8D3B800E0D032 /* HomePageController.swift */,
+				3D763BA82BAA312E00E0D032 /* HomeViewModel.swift */,
+			);
+			name = "İnspiration";
+			path = "İnspiration";
+			sourceTree = "<group>";
+		};
+		3D763BAB2BAA315800E0D032 /* Genarate */ = {
+			isa = PBXGroup;
+			children = (
+				3D763BAC2BAA316800E0D032 /* GenarateController.swift */,
+			);
+			path = Genarate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,12 +293,14 @@
 				3D763B892BA8D38800E0D032 /* CustomButton.swift in Sources */,
 				3D763BA72BA9F9C000E0D032 /* TabBarController.swift in Sources */,
 				3D763B9A2BA8D3B800E0D032 /* HomePageController.swift in Sources */,
+				3D763BAD2BAA316800E0D032 /* GenarateController.swift in Sources */,
 				3D763B972BA8D3AE00E0D032 /* PostModel.swift in Sources */,
 				3D763BA22BA9EA6E00E0D032 /* SelectStyleCell.swift in Sources */,
 				3D763B6D2BA8D34000E0D032 /* AppDelegate.swift in Sources */,
 				3D763BA42BA9EEEC00E0D032 /* StyleModel.swift in Sources */,
 				3D763B8C2BA8D3A300E0D032 /* Constant.swift in Sources */,
 				3D763B952BA8D3AE00E0D032 /* NetworkManager.swift in Sources */,
+				3D763BA92BAA312E00E0D032 /* HomeViewModel.swift in Sources */,
 				3D763B6F2BA8D34000E0D032 /* SceneDelegate.swift in Sources */,
 				3D763B942BA8D3AE00E0D032 /* NetworkHelper.swift in Sources */,
 				3D763B962BA8D3AE00E0D032 /* ResponseModel.swift in Sources */,

@@ -38,6 +38,7 @@ class SelectStyleCell: UICollectionViewCell {
         let label = UILabel()
         label.textAlignment = .center
         label.textColor = .gray
+        label.numberOfLines = 0
         label.font = .systemFont(ofSize: 15, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -61,7 +62,9 @@ extension SelectStyleCell {
             
             styleLabel.centerXAnchor.constraint(equalTo: styleImageView.centerXAnchor),
             styleLabel.topAnchor.constraint(equalTo: styleImageView.bottomAnchor),
-            styleLabel.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor)
+            styleLabel.bottomAnchor.constraint(greaterThanOrEqualTo:self.safeAreaLayoutGuide.bottomAnchor),
+            styleLabel.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor),
+            styleLabel.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor)
             
         ])
     }

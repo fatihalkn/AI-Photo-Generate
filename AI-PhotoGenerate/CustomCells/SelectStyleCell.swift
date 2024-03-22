@@ -26,7 +26,7 @@ class SelectStyleCell: UICollectionViewCell {
     
      let styleImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFill
+         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         imageView.backgroundColor = .white
         imageView.translatesAutoresizingMaskIntoConstraints = false

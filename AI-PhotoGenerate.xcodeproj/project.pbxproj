@@ -19,8 +19,6 @@
 		3D763B962BA8D3AE00E0D032 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763B922BA8D3AE00E0D032 /* ResponseModel.swift */; };
 		3D763B972BA8D3AE00E0D032 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763B932BA8D3AE00E0D032 /* PostModel.swift */; };
 		3D763B9A2BA8D3B800E0D032 /* HomePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763B992BA8D3B800E0D032 /* HomePageController.swift */; };
-		3D763B9D2BA8D3E200E0D032 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3D763B9C2BA8D3E200E0D032 /* Alamofire */; };
-		3D763B9F2BA8D3E200E0D032 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 3D763B9E2BA8D3E200E0D032 /* AlamofireDynamic */; };
 		3D763BA22BA9EA6E00E0D032 /* SelectStyleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763BA12BA9EA6E00E0D032 /* SelectStyleCell.swift */; };
 		3D763BA42BA9EEEC00E0D032 /* StyleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763BA32BA9EEEC00E0D032 /* StyleModel.swift */; };
 		3D763BA72BA9F9C000E0D032 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763BA62BA9F9C000E0D032 /* TabBarController.swift */; };
@@ -34,7 +32,31 @@
 		3D763BBD2BAC4A4B00E0D032 /* SeeAllViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763BBC2BAC4A4B00E0D032 /* SeeAllViewModel.swift */; };
 		3D763BBF2BAC6CC500E0D032 /* Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763BBE2BAC6CC500E0D032 /* Shake.swift */; };
 		3D763BC12BAC82E600E0D032 /* SupriseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763BC02BAC82E600E0D032 /* SupriseModel.swift */; };
+		3D763BCD2BADA50300E0D032 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3D763BCC2BADA50300E0D032 /* Alamofire */; };
+		3D763BCF2BADA50300E0D032 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 3D763BCE2BADA50300E0D032 /* AlamofireDynamic */; };
+		3D763BD22BADAE5A00E0D032 /* InspirationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763BD12BADAE5A00E0D032 /* InspirationController.swift */; };
+		3D763BD52BADAF2E00E0D032 /* MyArt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763BD42BADAF2E00E0D032 /* MyArt.swift */; };
+		3D763BD72BADBE4F00E0D032 /* InspirationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763BD62BADBE4F00E0D032 /* InspirationCell.swift */; };
+		3D763BD92BADC18000E0D032 /* InspirationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763BD82BADC18000E0D032 /* InspirationViewModel.swift */; };
+		3D763BDB2BADC1A300E0D032 /* InspirationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763BDA2BADC1A300E0D032 /* InspirationModel.swift */; };
+		3D763BDD2BADC9C000E0D032 /* InspirationReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763BDC2BADC9C000E0D032 /* InspirationReusableView.swift */; };
+		3D763BDF2BADDF8900E0D032 /* PopularAIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763BDE2BADDF8900E0D032 /* PopularAIModel.swift */; };
+		3D763BE22BADE28D00E0D032 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763BE12BADE28D00E0D032 /* DetailController.swift */; };
+		3D763BE42BADE77D00E0D032 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763BE32BADE77D00E0D032 /* DetailViewModel.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3D763BC32BADA3AA00E0D032 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3D763B692BA8D34000E0D032 /* AI-PhotoGenerate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AI-PhotoGenerate.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +85,15 @@
 		3D763BBC2BAC4A4B00E0D032 /* SeeAllViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeAllViewModel.swift; sourceTree = "<group>"; };
 		3D763BBE2BAC6CC500E0D032 /* Shake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shake.swift; sourceTree = "<group>"; };
 		3D763BC02BAC82E600E0D032 /* SupriseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupriseModel.swift; sourceTree = "<group>"; };
+		3D763BD12BADAE5A00E0D032 /* InspirationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspirationController.swift; sourceTree = "<group>"; };
+		3D763BD42BADAF2E00E0D032 /* MyArt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyArt.swift; sourceTree = "<group>"; };
+		3D763BD62BADBE4F00E0D032 /* InspirationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspirationCell.swift; sourceTree = "<group>"; };
+		3D763BD82BADC18000E0D032 /* InspirationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspirationViewModel.swift; sourceTree = "<group>"; };
+		3D763BDA2BADC1A300E0D032 /* InspirationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspirationModel.swift; sourceTree = "<group>"; };
+		3D763BDC2BADC9C000E0D032 /* InspirationReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspirationReusableView.swift; sourceTree = "<group>"; };
+		3D763BDE2BADDF8900E0D032 /* PopularAIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularAIModel.swift; sourceTree = "<group>"; };
+		3D763BE12BADE28D00E0D032 /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
+		3D763BE32BADE77D00E0D032 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +102,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D763BB32BAB347F00E0D032 /* ProgressHUD in Frameworks */,
-				3D763B9D2BA8D3E200E0D032 /* Alamofire in Frameworks */,
-				3D763B9F2BA8D3E200E0D032 /* AlamofireDynamic in Frameworks */,
+				3D763BCF2BADA50300E0D032 /* AlamofireDynamic in Frameworks */,
+				3D763BCD2BADA50300E0D032 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +115,7 @@
 			children = (
 				3D763B6B2BA8D34000E0D032 /* AI-PhotoGenerate */,
 				3D763B6A2BA8D34000E0D032 /* Products */,
+				3D763BC42BADA3F000E0D032 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -184,6 +216,8 @@
 				3D763BA32BA9EEEC00E0D032 /* StyleModel.swift */,
 				3D763BB42BAC34AE00E0D032 /* GenerateModel.swift */,
 				3D763BC02BAC82E600E0D032 /* SupriseModel.swift */,
+				3D763BDA2BADC1A300E0D032 /* InspirationModel.swift */,
+				3D763BDE2BADDF8900E0D032 /* PopularAIModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -191,9 +225,12 @@
 		3D763B982BA8D3B800E0D032 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				3D763BE02BADE27900E0D032 /* Detail */,
+				3D763BD32BADAF2400E0D032 /* MyArt */,
+				3D763BD02BADADF500E0D032 /* İnstpirat */,
 				3D763BB82BAC45DE00E0D032 /* SeAll */,
 				3D763BAB2BAA315800E0D032 /* Genarate */,
-				3D763BAA2BAA314200E0D032 /* İnspiration */,
+				3D763BAA2BAA314200E0D032 /* Creat */,
 			);
 			name = Scene;
 			path = ../../../TextToPhoto/TextToPhoto/Scene;
@@ -203,6 +240,8 @@
 			isa = PBXGroup;
 			children = (
 				3D763BA12BA9EA6E00E0D032 /* SelectStyleCell.swift */,
+				3D763BD62BADBE4F00E0D032 /* InspirationCell.swift */,
+				3D763BDC2BADC9C000E0D032 /* InspirationReusableView.swift */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -215,13 +254,13 @@
 			path = CustomTabBar;
 			sourceTree = "<group>";
 		};
-		3D763BAA2BAA314200E0D032 /* İnspiration */ = {
+		3D763BAA2BAA314200E0D032 /* Creat */ = {
 			isa = PBXGroup;
 			children = (
 				3D763B992BA8D3B800E0D032 /* HomePageController.swift */,
 				3D763BA82BAA312E00E0D032 /* HomeViewModel.swift */,
 			);
-			name = "İnspiration";
+			name = Creat;
 			path = "İnspiration";
 			sourceTree = "<group>";
 		};
@@ -253,6 +292,40 @@
 			path = SeAll;
 			sourceTree = "<group>";
 		};
+		3D763BC42BADA3F000E0D032 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3D763BD02BADADF500E0D032 /* İnstpirat */ = {
+			isa = PBXGroup;
+			children = (
+				3D763BD12BADAE5A00E0D032 /* InspirationController.swift */,
+				3D763BD82BADC18000E0D032 /* InspirationViewModel.swift */,
+			);
+			name = "İnstpirat";
+			path = "İnstpirat";
+			sourceTree = "<group>";
+		};
+		3D763BD32BADAF2400E0D032 /* MyArt */ = {
+			isa = PBXGroup;
+			children = (
+				3D763BD42BADAF2E00E0D032 /* MyArt.swift */,
+			);
+			path = MyArt;
+			sourceTree = "<group>";
+		};
+		3D763BE02BADE27900E0D032 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				3D763BE12BADE28D00E0D032 /* DetailController.swift */,
+				3D763BE32BADE77D00E0D032 /* DetailViewModel.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -263,6 +336,7 @@
 				3D763B652BA8D34000E0D032 /* Sources */,
 				3D763B662BA8D34000E0D032 /* Frameworks */,
 				3D763B672BA8D34000E0D032 /* Resources */,
+				3D763BC32BADA3AA00E0D032 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -270,9 +344,9 @@
 			);
 			name = "AI-PhotoGenerate";
 			packageProductDependencies = (
-				3D763B9C2BA8D3E200E0D032 /* Alamofire */,
-				3D763B9E2BA8D3E200E0D032 /* AlamofireDynamic */,
 				3D763BB22BAB347F00E0D032 /* ProgressHUD */,
+				3D763BCC2BADA50300E0D032 /* Alamofire */,
+				3D763BCE2BADA50300E0D032 /* AlamofireDynamic */,
 			);
 			productName = "AI-PhotoGenerate";
 			productReference = 3D763B692BA8D34000E0D032 /* AI-PhotoGenerate.app */;
@@ -335,24 +409,33 @@
 				3D763B892BA8D38800E0D032 /* CustomButton.swift in Sources */,
 				3D763BA72BA9F9C000E0D032 /* TabBarController.swift in Sources */,
 				3D763BBD2BAC4A4B00E0D032 /* SeeAllViewModel.swift in Sources */,
+				3D763BDF2BADDF8900E0D032 /* PopularAIModel.swift in Sources */,
 				3D763BC12BAC82E600E0D032 /* SupriseModel.swift in Sources */,
+				3D763BD22BADAE5A00E0D032 /* InspirationController.swift in Sources */,
 				3D763BBA2BAC45F200E0D032 /* SeeAllController.swift in Sources */,
+				3D763BD72BADBE4F00E0D032 /* InspirationCell.swift in Sources */,
 				3D763B9A2BA8D3B800E0D032 /* HomePageController.swift in Sources */,
 				3D763BAD2BAA316800E0D032 /* GenarateController.swift in Sources */,
 				3D763B972BA8D3AE00E0D032 /* PostModel.swift in Sources */,
 				3D763BB72BAC451900E0D032 /* GenareteViewModel.swift in Sources */,
 				3D763BA22BA9EA6E00E0D032 /* SelectStyleCell.swift in Sources */,
+				3D763BE42BADE77D00E0D032 /* DetailViewModel.swift in Sources */,
+				3D763BD52BADAF2E00E0D032 /* MyArt.swift in Sources */,
 				3D763B6D2BA8D34000E0D032 /* AppDelegate.swift in Sources */,
+				3D763BDD2BADC9C000E0D032 /* InspirationReusableView.swift in Sources */,
 				3D763BB52BAC34AF00E0D032 /* GenerateModel.swift in Sources */,
 				3D763BBF2BAC6CC500E0D032 /* Shake.swift in Sources */,
 				3D763BA42BA9EEEC00E0D032 /* StyleModel.swift in Sources */,
 				3D763B8C2BA8D3A300E0D032 /* Constant.swift in Sources */,
 				3D763B952BA8D3AE00E0D032 /* NetworkManager.swift in Sources */,
+				3D763BD92BADC18000E0D032 /* InspirationViewModel.swift in Sources */,
 				3D763BA92BAA312E00E0D032 /* HomeViewModel.swift in Sources */,
+				3D763BDB2BADC1A300E0D032 /* InspirationModel.swift in Sources */,
 				3D763B6F2BA8D34000E0D032 /* SceneDelegate.swift in Sources */,
 				3D763B942BA8D3AE00E0D032 /* NetworkHelper.swift in Sources */,
 				3D763B962BA8D3AE00E0D032 /* ResponseModel.swift in Sources */,
 				3D763BB02BAB346D00E0D032 /* ProgresHud.swift in Sources */,
+				3D763BE22BADE28D00E0D032 /* DetailController.swift in Sources */,
 				3D763B882BA8D38800E0D032 /* NavigationBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -504,6 +587,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -531,6 +615,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -587,20 +672,18 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		3D763B9C2BA8D3E200E0D032 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3D763B9B2BA8D3E200E0D032 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-		3D763B9E2BA8D3E200E0D032 /* AlamofireDynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3D763B9B2BA8D3E200E0D032 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = AlamofireDynamic;
-		};
 		3D763BB22BAB347F00E0D032 /* ProgressHUD */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3D763BB12BAB347F00E0D032 /* XCRemoteSwiftPackageReference "ProgressHUD" */;
 			productName = ProgressHUD;
+		};
+		3D763BCC2BADA50300E0D032 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Alamofire;
+		};
+		3D763BCE2BADA50300E0D032 /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AlamofireDynamic;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

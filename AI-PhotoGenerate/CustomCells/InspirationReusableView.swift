@@ -7,7 +7,7 @@
 
 import UIKit
 protocol InspirationReusableViewDelegate {
-    func tappedCell()
+    func tappedCell(_ indexPath: IndexPath)
 }
 class InspirationReusableView: UICollectionReusableView {
     static let identifier = "InspirationReusableView"
@@ -101,7 +101,7 @@ extension InspirationReusableView: UICollectionViewDataSource, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        interface?.tappedCell()
+        interface?.tappedCell(indexPath)
     }
 }
 

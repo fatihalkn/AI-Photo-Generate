@@ -7,10 +7,11 @@
 
 import UIKit
 protocol InspirationCellDelegate {
-    func clickedTryButton()
+    func clickedTryButton(indexPath: IndexPath?)
 }
 
 class InspirationCell: UICollectionViewCell {
+
     static let identifier = "InspirationCell"
     var interface: InspirationCellDelegate?
     let inspirationImageView: UIImageView = {
@@ -28,6 +29,8 @@ class InspirationCell: UICollectionViewCell {
                                   font: .systemFont(ofSize: 13, weight: .bold),
                                   backroundColor: .blackgray)
     
+    //MARK: - Properties
+    var indexPath: IndexPath?
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
@@ -59,7 +62,7 @@ class InspirationCell: UICollectionViewCell {
     }
     
     @objc func tappedTryButton() {
-        interface?.clickedTryButton()
+        interface?.clickedTryButton(indexPath: indexPath)
 
     }
     

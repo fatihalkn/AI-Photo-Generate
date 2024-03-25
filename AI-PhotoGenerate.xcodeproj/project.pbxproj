@@ -43,6 +43,10 @@
 		3D763BDF2BADDF8900E0D032 /* PopularAIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763BDE2BADDF8900E0D032 /* PopularAIModel.swift */; };
 		3D763BE22BADE28D00E0D032 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763BE12BADE28D00E0D032 /* DetailController.swift */; };
 		3D763BE42BADE77D00E0D032 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763BE32BADE77D00E0D032 /* DetailViewModel.swift */; };
+		3D763BEE2BB0C7F200E0D032 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D763BED2BB0C7F200E0D032 /* CoreData.framework */; };
+		3D763BF12BB0C82500E0D032 /* GenerateImageDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3D763BEF2BB0C82500E0D032 /* GenerateImageDataModel.xcdatamodeld */; };
+		3D763BF52BB0CF4C00E0D032 /* MyArdViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763BF42BB0CF4C00E0D032 /* MyArdViewModel.swift */; };
+		3D763BF82BB0CFC300E0D032 /* CoreDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763BF72BB0CFC300E0D032 /* CoreDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -94,6 +98,10 @@
 		3D763BDE2BADDF8900E0D032 /* PopularAIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularAIModel.swift; sourceTree = "<group>"; };
 		3D763BE12BADE28D00E0D032 /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		3D763BE32BADE77D00E0D032 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		3D763BED2BB0C7F200E0D032 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		3D763BF02BB0C82500E0D032 /* GenerateImageDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GenerateImageDataModel.xcdatamodel; sourceTree = "<group>"; };
+		3D763BF42BB0CF4C00E0D032 /* MyArdViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyArdViewModel.swift; sourceTree = "<group>"; };
+		3D763BF72BB0CFC300E0D032 /* CoreDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +110,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D763BB32BAB347F00E0D032 /* ProgressHUD in Frameworks */,
+				3D763BEE2BB0C7F200E0D032 /* CoreData.framework in Frameworks */,
 				3D763BCF2BADA50300E0D032 /* AlamofireDynamic in Frameworks */,
 				3D763BCD2BADA50300E0D032 /* Alamofire in Frameworks */,
 			);
@@ -113,6 +122,7 @@
 		3D763B602BA8D34000E0D032 = {
 			isa = PBXGroup;
 			children = (
+				3D763BEF2BB0C82500E0D032 /* GenerateImageDataModel.xcdatamodeld */,
 				3D763B6B2BA8D34000E0D032 /* AI-PhotoGenerate */,
 				3D763B6A2BA8D34000E0D032 /* Products */,
 				3D763BC42BADA3F000E0D032 /* Frameworks */,
@@ -130,6 +140,7 @@
 		3D763B6B2BA8D34000E0D032 /* AI-PhotoGenerate */ = {
 			isa = PBXGroup;
 			children = (
+				3D763BF62BB0CFB100E0D032 /* CoreDAta */,
 				3D763BAE2BAB323300E0D032 /* Extantion+UIView */,
 				3D763BA02BA9E98E00E0D032 /* CustomCells */,
 				3D763B982BA8D3B800E0D032 /* Scene */,
@@ -295,6 +306,7 @@
 		3D763BC42BADA3F000E0D032 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3D763BED2BB0C7F200E0D032 /* CoreData.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -313,6 +325,7 @@
 			isa = PBXGroup;
 			children = (
 				3D763BD42BADAF2E00E0D032 /* MyArt.swift */,
+				3D763BF42BB0CF4C00E0D032 /* MyArdViewModel.swift */,
 			);
 			path = MyArt;
 			sourceTree = "<group>";
@@ -324,6 +337,14 @@
 				3D763BE32BADE77D00E0D032 /* DetailViewModel.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		3D763BF62BB0CFB100E0D032 /* CoreDAta */ = {
+			isa = PBXGroup;
+			children = (
+				3D763BF72BB0CFC300E0D032 /* CoreDataModel.swift */,
+			);
+			path = CoreDAta;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -412,11 +433,13 @@
 				3D763BDF2BADDF8900E0D032 /* PopularAIModel.swift in Sources */,
 				3D763BC12BAC82E600E0D032 /* SupriseModel.swift in Sources */,
 				3D763BD22BADAE5A00E0D032 /* InspirationController.swift in Sources */,
+				3D763BF82BB0CFC300E0D032 /* CoreDataModel.swift in Sources */,
 				3D763BBA2BAC45F200E0D032 /* SeeAllController.swift in Sources */,
 				3D763BD72BADBE4F00E0D032 /* InspirationCell.swift in Sources */,
 				3D763B9A2BA8D3B800E0D032 /* HomePageController.swift in Sources */,
 				3D763BAD2BAA316800E0D032 /* GenarateController.swift in Sources */,
 				3D763B972BA8D3AE00E0D032 /* PostModel.swift in Sources */,
+				3D763BF52BB0CF4C00E0D032 /* MyArdViewModel.swift in Sources */,
 				3D763BB72BAC451900E0D032 /* GenareteViewModel.swift in Sources */,
 				3D763BA22BA9EA6E00E0D032 /* SelectStyleCell.swift in Sources */,
 				3D763BE42BADE77D00E0D032 /* DetailViewModel.swift in Sources */,
@@ -426,6 +449,7 @@
 				3D763BB52BAC34AF00E0D032 /* GenerateModel.swift in Sources */,
 				3D763BBF2BAC6CC500E0D032 /* Shake.swift in Sources */,
 				3D763BA42BA9EEEC00E0D032 /* StyleModel.swift in Sources */,
+				3D763BF12BB0C82500E0D032 /* GenerateImageDataModel.xcdatamodeld in Sources */,
 				3D763B8C2BA8D3A300E0D032 /* Constant.swift in Sources */,
 				3D763B952BA8D3AE00E0D032 /* NetworkManager.swift in Sources */,
 				3D763BD92BADC18000E0D032 /* InspirationViewModel.swift in Sources */,
@@ -686,6 +710,19 @@
 			productName = AlamofireDynamic;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		3D763BEF2BB0C82500E0D032 /* GenerateImageDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3D763BF02BB0C82500E0D032 /* GenerateImageDataModel.xcdatamodel */,
+			);
+			currentVersion = 3D763BF02BB0C82500E0D032 /* GenerateImageDataModel.xcdatamodel */;
+			path = GenerateImageDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3D763B612BA8D34000E0D032 /* Project object */;
 }

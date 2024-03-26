@@ -47,6 +47,7 @@
 		3D763BF12BB0C82500E0D032 /* GenerateImageDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3D763BEF2BB0C82500E0D032 /* GenerateImageDataModel.xcdatamodeld */; };
 		3D763BF52BB0CF4C00E0D032 /* MyArdViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763BF42BB0CF4C00E0D032 /* MyArdViewModel.swift */; };
 		3D763BF82BB0CFC300E0D032 /* CoreDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763BF72BB0CFC300E0D032 /* CoreDataModel.swift */; };
+		3D763BFA2BB178F800E0D032 /* MyArtCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763BF92BB178F800E0D032 /* MyArtCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -102,6 +103,7 @@
 		3D763BF02BB0C82500E0D032 /* GenerateImageDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GenerateImageDataModel.xcdatamodel; sourceTree = "<group>"; };
 		3D763BF42BB0CF4C00E0D032 /* MyArdViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyArdViewModel.swift; sourceTree = "<group>"; };
 		3D763BF72BB0CFC300E0D032 /* CoreDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataModel.swift; sourceTree = "<group>"; };
+		3D763BF92BB178F800E0D032 /* MyArtCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyArtCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,8 +173,7 @@
 				3D763B842BA8D38800E0D032 /* CustomNavigationBar */,
 				3D763B862BA8D38800E0D032 /* CustomButton */,
 			);
-			name = CustomView;
-			path = ../../../TextToPhoto/TextToPhoto/CustomView;
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 		3D763B842BA8D38800E0D032 /* CustomNavigationBar */ = {
@@ -196,8 +197,7 @@
 			children = (
 				3D763B8B2BA8D3A300E0D032 /* Constant.swift */,
 			);
-			name = Constant;
-			path = ../../../TextToPhoto/TextToPhoto/Constant;
+			path = Constant;
 			sourceTree = "<group>";
 		};
 		3D763B8D2BA8D3AE00E0D032 /* Network */ = {
@@ -206,8 +206,7 @@
 				3D763B8E2BA8D3AE00E0D032 /* Core */,
 				3D763B912BA8D3AE00E0D032 /* Model */,
 			);
-			name = Network;
-			path = ../../../TextToPhoto/TextToPhoto/Network;
+			path = Network;
 			sourceTree = "<group>";
 		};
 		3D763B8E2BA8D3AE00E0D032 /* Core */ = {
@@ -243,8 +242,7 @@
 				3D763BAB2BAA315800E0D032 /* Genarate */,
 				3D763BAA2BAA314200E0D032 /* Creat */,
 			);
-			name = Scene;
-			path = ../../../TextToPhoto/TextToPhoto/Scene;
+			path = Scene;
 			sourceTree = "<group>";
 		};
 		3D763BA02BA9E98E00E0D032 /* CustomCells */ = {
@@ -253,6 +251,7 @@
 				3D763BA12BA9EA6E00E0D032 /* SelectStyleCell.swift */,
 				3D763BD62BADBE4F00E0D032 /* InspirationCell.swift */,
 				3D763BDC2BADC9C000E0D032 /* InspirationReusableView.swift */,
+				3D763BF92BB178F800E0D032 /* MyArtCell.swift */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -447,6 +446,7 @@
 				3D763B6D2BA8D34000E0D032 /* AppDelegate.swift in Sources */,
 				3D763BDD2BADC9C000E0D032 /* InspirationReusableView.swift in Sources */,
 				3D763BB52BAC34AF00E0D032 /* GenerateModel.swift in Sources */,
+				3D763BFA2BB178F800E0D032 /* MyArtCell.swift in Sources */,
 				3D763BBF2BAC6CC500E0D032 /* Shake.swift in Sources */,
 				3D763BA42BA9EEEC00E0D032 /* StyleModel.swift in Sources */,
 				3D763BF12BB0C82500E0D032 /* GenerateImageDataModel.xcdatamodeld in Sources */,
@@ -611,7 +611,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -639,7 +639,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

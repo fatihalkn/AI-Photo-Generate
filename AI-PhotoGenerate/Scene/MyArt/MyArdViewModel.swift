@@ -7,7 +7,14 @@
 
 import Foundation
 
-class MyArdViewModel: MyArt {
+class MyArdViewModel {
     
+    var myArts: [MyArtCollectionViewItem] = []
+    var successCallback: (() -> Void)?
+    
+    func getData() {
+        myArts = CoreDataModel.shared.getData()
+        successCallback?()
+    }
    
 }

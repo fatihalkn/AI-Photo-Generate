@@ -83,7 +83,10 @@ extension InspirationController: UICollectionViewDataSource, UICollectionViewDel
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("!")
+        let vc = DetailController()
+        vc.prompDescLabel.text = ınspirationViewModel.fatureArtData[indexPath.item].prompt
+        vc.promptImageView.image = ınspirationViewModel.fatureArtData[indexPath.item].image
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {

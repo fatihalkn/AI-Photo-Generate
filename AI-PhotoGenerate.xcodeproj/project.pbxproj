@@ -48,6 +48,12 @@
 		3D763BF52BB0CF4C00E0D032 /* MyArdViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763BF42BB0CF4C00E0D032 /* MyArdViewModel.swift */; };
 		3D763BF82BB0CFC300E0D032 /* CoreDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763BF72BB0CFC300E0D032 /* CoreDataModel.swift */; };
 		3D763BFA2BB178F800E0D032 /* MyArtCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763BF92BB178F800E0D032 /* MyArtCell.swift */; };
+		3D763BFC2BB2C9D200E0D032 /* MyArtCollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763BFB2BB2C9D200E0D032 /* MyArtCollectionViewItem.swift */; };
+		3D763BFF2BB32D4C00E0D032 /* SetttingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763BFE2BB32D4C00E0D032 /* SetttingsViewController.swift */; };
+		3D763C032BB330A400E0D032 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763C022BB330A400E0D032 /* SettingsModel.swift */; };
+		3D763C052BB330E000E0D032 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763C042BB330E000E0D032 /* SettingsViewModel.swift */; };
+		3D763C092BB365CE00E0D032 /* SettingsElementsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763C082BB365CE00E0D032 /* SettingsElementsCell.swift */; };
+		3D763C0D2BB36BF200E0D032 /* TableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763C0C2BB36BF200E0D032 /* TableViewHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -104,6 +110,12 @@
 		3D763BF42BB0CF4C00E0D032 /* MyArdViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyArdViewModel.swift; sourceTree = "<group>"; };
 		3D763BF72BB0CFC300E0D032 /* CoreDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataModel.swift; sourceTree = "<group>"; };
 		3D763BF92BB178F800E0D032 /* MyArtCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyArtCell.swift; sourceTree = "<group>"; };
+		3D763BFB2BB2C9D200E0D032 /* MyArtCollectionViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyArtCollectionViewItem.swift; sourceTree = "<group>"; };
+		3D763BFE2BB32D4C00E0D032 /* SetttingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetttingsViewController.swift; sourceTree = "<group>"; };
+		3D763C022BB330A400E0D032 /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
+		3D763C042BB330E000E0D032 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		3D763C082BB365CE00E0D032 /* SettingsElementsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsElementsCell.swift; sourceTree = "<group>"; };
+		3D763C0C2BB36BF200E0D032 /* TableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +240,7 @@
 				3D763BC02BAC82E600E0D032 /* SupriseModel.swift */,
 				3D763BDA2BADC1A300E0D032 /* InspirationModel.swift */,
 				3D763BDE2BADDF8900E0D032 /* PopularAIModel.swift */,
+				3D763C022BB330A400E0D032 /* SettingsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -235,6 +248,7 @@
 		3D763B982BA8D3B800E0D032 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				3D763BFD2BB32D3800E0D032 /* Settings */,
 				3D763BE02BADE27900E0D032 /* Detail */,
 				3D763BD32BADAF2400E0D032 /* MyArt */,
 				3D763BD02BADADF500E0D032 /* İnstpirat */,
@@ -252,6 +266,8 @@
 				3D763BD62BADBE4F00E0D032 /* InspirationCell.swift */,
 				3D763BDC2BADC9C000E0D032 /* InspirationReusableView.swift */,
 				3D763BF92BB178F800E0D032 /* MyArtCell.swift */,
+				3D763C082BB365CE00E0D032 /* SettingsElementsCell.swift */,
+				3D763C0C2BB36BF200E0D032 /* TableViewHeader.swift */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -325,6 +341,7 @@
 			children = (
 				3D763BD42BADAF2E00E0D032 /* MyArt.swift */,
 				3D763BF42BB0CF4C00E0D032 /* MyArdViewModel.swift */,
+				3D763BFB2BB2C9D200E0D032 /* MyArtCollectionViewItem.swift */,
 			);
 			path = MyArt;
 			sourceTree = "<group>";
@@ -344,6 +361,15 @@
 				3D763BF72BB0CFC300E0D032 /* CoreDataModel.swift */,
 			);
 			path = CoreDAta;
+			sourceTree = "<group>";
+		};
+		3D763BFD2BB32D3800E0D032 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				3D763BFE2BB32D4C00E0D032 /* SetttingsViewController.swift */,
+				3D763C042BB330E000E0D032 /* SettingsViewModel.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -427,6 +453,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D763B892BA8D38800E0D032 /* CustomButton.swift in Sources */,
+				3D763C092BB365CE00E0D032 /* SettingsElementsCell.swift in Sources */,
 				3D763BA72BA9F9C000E0D032 /* TabBarController.swift in Sources */,
 				3D763BBD2BAC4A4B00E0D032 /* SeeAllViewModel.swift in Sources */,
 				3D763BDF2BADDF8900E0D032 /* PopularAIModel.swift in Sources */,
@@ -438,8 +465,10 @@
 				3D763B9A2BA8D3B800E0D032 /* HomePageController.swift in Sources */,
 				3D763BAD2BAA316800E0D032 /* GenarateController.swift in Sources */,
 				3D763B972BA8D3AE00E0D032 /* PostModel.swift in Sources */,
+				3D763C032BB330A400E0D032 /* SettingsModel.swift in Sources */,
 				3D763BF52BB0CF4C00E0D032 /* MyArdViewModel.swift in Sources */,
 				3D763BB72BAC451900E0D032 /* GenareteViewModel.swift in Sources */,
+				3D763C052BB330E000E0D032 /* SettingsViewModel.swift in Sources */,
 				3D763BA22BA9EA6E00E0D032 /* SelectStyleCell.swift in Sources */,
 				3D763BE42BADE77D00E0D032 /* DetailViewModel.swift in Sources */,
 				3D763BD52BADAF2E00E0D032 /* MyArt.swift in Sources */,
@@ -454,13 +483,16 @@
 				3D763B952BA8D3AE00E0D032 /* NetworkManager.swift in Sources */,
 				3D763BD92BADC18000E0D032 /* InspirationViewModel.swift in Sources */,
 				3D763BA92BAA312E00E0D032 /* HomeViewModel.swift in Sources */,
+				3D763C0D2BB36BF200E0D032 /* TableViewHeader.swift in Sources */,
 				3D763BDB2BADC1A300E0D032 /* InspirationModel.swift in Sources */,
 				3D763B6F2BA8D34000E0D032 /* SceneDelegate.swift in Sources */,
 				3D763B942BA8D3AE00E0D032 /* NetworkHelper.swift in Sources */,
 				3D763B962BA8D3AE00E0D032 /* ResponseModel.swift in Sources */,
 				3D763BB02BAB346D00E0D032 /* ProgresHud.swift in Sources */,
+				3D763BFF2BB32D4C00E0D032 /* SetttingsViewController.swift in Sources */,
 				3D763BE22BADE28D00E0D032 /* DetailController.swift in Sources */,
 				3D763B882BA8D38800E0D032 /* NavigationBar.swift in Sources */,
+				3D763BFC2BB2C9D200E0D032 /* MyArtCollectionViewItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

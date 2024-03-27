@@ -13,11 +13,6 @@ class CoreDataModel {
     
     static let shared = CoreDataModel()
     
-    var imageArray = [Data]()
-    var idArray = [UUID]()
-    var promptArray = [String]()
-    
-    
     func deleteItem(withID id: UUID) {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         let context = appDelegate.persistentContainer.viewContext
@@ -34,33 +29,30 @@ class CoreDataModel {
         }
     }
     
-    func getData() {
-        self.imageArray.removeAll(keepingCapacity: true)
-        self.idArray.removeAll(keepingCapacity: true)
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+    func getData() -> [MyArtCollectionViewItem] {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return [] }
         let context = appDelegate.persistentContainer.viewContext
         let fetchRequset = NSFetchRequest<NSFetchRequestResult>(entityName: "Art")
         fetchRequset.returnsObjectsAsFaults = false
         
         do {
-           let results =  try context.fetch(fetchRequset)
+            var myArts: [MyArtCollectionViewItem] = []
+            let results =  try context.fetch(fetchRequset)
             for result in results as! [NSManagedObject] {
-                if let image = result.value(forKey: "image") as? Data {
-                    self.imageArray.append(image)
-                }
+                let image = result.value(forKey: "image") as? Data
+                let id  = result.value(forKey: "id") as? UUID
+                let prompt = result.value(forKey: "prompt") as? String
+                let myArtCollectionViewItem = MyArtCollectionViewItem(imageData: image,
+                                                                      imagePrompt: prompt,
+                                                                      id: id)
+                myArts.append(myArtCollectionViewItem)
                 
-                if let id  = result.value(forKey: "id") as? UUID {
-                    self.idArray.append(id)
-                }
-                
-                if let prompt = result.value(forKey: "prompt") as? String {
-                    self.promptArray.append(prompt)
-                }
             }
             
+            return myArts
         } catch {
             print(error.localizedDescription)
-            
+            return []
         }
     }
 }

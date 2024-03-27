@@ -37,7 +37,7 @@ class SelectStyleCell: UICollectionViewCell {
      let styleLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        label.textColor = .gray
+        label.textColor = .rgb
         label.numberOfLines = 0
         label.font = .systemFont(ofSize: 15, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false

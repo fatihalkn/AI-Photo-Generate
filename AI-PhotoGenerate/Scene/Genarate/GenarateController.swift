@@ -17,6 +17,7 @@ class GenarateController: UIViewController {
         let label = UILabel()
         label.font = .systemFont(ofSize: 20, weight: .bold)
         label.textColor = .white
+        label.numberOfLines = 3
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -162,7 +163,8 @@ extension GenarateController {
             photoPromptTitleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             photoPromptTitleLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,constant: 10),
             photoPromptTitleLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor,constant: -10),
-            photoPromptTitleLabel.heightAnchor.constraint(equalToConstant: 40),
+            photoPromptTitleLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 40),
+                                                         
             
             
             genareteImage.topAnchor.constraint(equalTo:photoPromptTitleLabel.bottomAnchor,constant: 20),

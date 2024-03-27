@@ -10,6 +10,8 @@ import UIKit
 
 class MyArt: UIViewController {
     
+    let viewModel = MyArdViewModel()
+    
     let myArtCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -26,13 +28,17 @@ class MyArt: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .main
-        getCoreData()
+        viewModel.successCallback = {
+            self.myArtCollectionView.reloadData()
+        }
+        viewModel.getData()
         setupUI()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        observer()
+        viewModel.getData()
     }
     
     override func viewDidLayoutSubviews() {
@@ -68,19 +74,16 @@ class MyArt: UIViewController {
 //MARK: - Configure CollectionViewü
 extension MyArt: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let imageArray = CoreDataModel.shared.imageArray.count
-        let promptArray = CoreDataModel.shared.promptArray.count
-        return max(imageArray, promptArray)
-        
-        
+        viewModel.myArts.count
+                
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = myArtCollectionView.dequeueReusableCell(withReuseIdentifier: MyArtCell.identifier, for: indexPath) as! MyArtCell
-        let data = CoreDataModel.shared.imageArray[indexPath.item]
+        let data = viewModel.myArts[indexPath.item].imageData
             cell.indexPath = indexPath
             cell.myArtCellinterface = self
-        cell.myArtImageView.image = UIImage(data: data)
+        cell.myArtImageView.image = UIImage(data: data!)
         return cell
     }
     
@@ -91,30 +94,13 @@ extension MyArt: UICollectionViewDelegate, UICollectionViewDataSource, UICollect
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let imageData = CoreDataModel.shared.imageArray[indexPath.item]
-        let prompt = CoreDataModel.shared.promptArray[indexPath.item]
+        let imageData = viewModel.myArts[indexPath.item].imageData
+        let prompt = viewModel.myArts[indexPath.item].imagePrompt
         let detailVC = DetailController()
-        detailVC.promptImageView.image = UIImage(data: imageData)
+        detailVC.promptImageView.image = UIImage(data: imageData!)
         detailVC.prompDescLabel.text = prompt
         navigationController?.pushViewController(detailVC, animated: true)
         
-    }
-}
-
-//MARK: - Configure FetchData
-extension MyArt {
-    
-    func observer() {
-        NotificationCenter.default.addObserver(self, selector: #selector(coreData), name: NSNotification.Name(rawValue: "newData"), object: nil)
-    }
-    
-    @objc func coreData() {
-        CoreDataModel.shared.getData()
-        myArtCollectionView.reloadData()
-    }
-    
-    func getCoreData() {
-        CoreDataModel.shared.getData()
     }
 }
 
@@ -126,11 +112,9 @@ extension MyArt: MyArtCellDelegate {
             let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
             alertController.addAction(cancelAction)
             let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { _ in
-            let idToDelete = CoreDataModel.shared.idArray[indexPath.item]
-            CoreDataModel.shared.deleteItem(withID: idToDelete)
-            CoreDataModel.shared.imageArray.remove(at: indexPath.item)
-            CoreDataModel.shared.idArray.remove(at: indexPath.item)
-            CoreDataModel.shared.promptArray.remove(at: indexPath.item)
+                let idToDelete = self.viewModel.myArts[indexPath.item].id
+            CoreDataModel.shared.deleteItem(withID: idToDelete!)
+                self.viewModel.myArts.remove(at: indexPath.item)
             self.myArtCollectionView.reloadData()
                 
             }

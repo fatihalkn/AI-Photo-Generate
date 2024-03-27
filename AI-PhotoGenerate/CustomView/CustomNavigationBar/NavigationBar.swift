@@ -34,6 +34,8 @@ extension UIViewController {
                                                     font: .systemFont(ofSize: 30, weight: .bold),
                                                     backroundColor: .clear)
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: creatNavigationLeftItem)
+        
+        
     }
     
     

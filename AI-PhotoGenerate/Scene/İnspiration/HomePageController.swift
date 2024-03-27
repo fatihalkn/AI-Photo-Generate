@@ -64,26 +64,35 @@ class HomePageController: UIViewController {
         return collectionView
     }()
     
-    private let textToPhotoButton = CustomButtons(title: "Text to image",
-                                                  titleColor: .white,
-                                                  font: .systemFont(ofSize: 12, weight: .medium),
-                                                  backroundColor: .texToPhoto,
-                                                  image:UIImage(systemName:"pencil.line")?.withTintColor(.white, renderingMode: .alwaysOriginal))
+    private let textToPhotoLabel: UILabel = {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 15, weight: .medium)
+        label.text = "Text to image"
+        label.textAlignment = .center
+        label.textColor = .white
+        label.backgroundColor = .texToPhoto
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .rgb
+        return label
+    }()
+    
+    
     
     private let supriseMeButton = CustomButtons(title: "Suprise me",
-                                                titleColor: .lightGray,
+                                                titleColor: .rgb,
                                                 font: .systemFont(ofSize: 12, weight: .bold),
                                                 backroundColor: .texToPhoto)
     
     private let seeAllButton = CustomButtons(title: "See all >",
-                                             titleColor: .gray,
+                                             titleColor: .rgb,
                                              font: .systemFont(ofSize: 15, weight: .bold),
                                              backroundColor: nil)
     private let createButton = CustomButtons(title: "Create >",
-                                             titleColor: .white,
+                                             titleColor: .rgb,
                                              font: .systemFont(ofSize: 20, weight: .bold),
                                              backroundColor: .button)
     private let clearButton = CustomButtons(title: "Clear Text",
+                                            titleColor: .rgb,
                                             font: .systemFont(ofSize: 10, weight: .thin),
                                             backroundColor: .texToPhoto)
     
@@ -104,7 +113,7 @@ class HomePageController: UIViewController {
     
     func setupUI() {
         view.addSubview(textView)
-        view.addSubview(textToPhotoButton)
+        view.addSubview(textToPhotoLabel)
         view.addSubview(promptTitleLabel)
         view.addSubview(supriseMeButton)
         view.addSubview(selectStyleLabel)
@@ -192,8 +201,8 @@ class HomePageController: UIViewController {
     }
     
     func setupRadius() {
-        textToPhotoButton.layer.cornerRadius = textToPhotoButton.frame.height / 2
-        textToPhotoButton.clipsToBounds = true
+        textToPhotoLabel.layer.cornerRadius = textToPhotoLabel.frame.height / 2
+        textToPhotoLabel.clipsToBounds = true
         
         supriseMeButton.layer.cornerRadius = supriseMeButton.frame.height / 2
         supriseMeButton.clipsToBounds = true
@@ -297,12 +306,12 @@ extension HomePageController {
     func setupCons() {
 
         NSLayoutConstraint.activate([
-            textToPhotoButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            textToPhotoButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,constant: 110),
-            textToPhotoButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -110),
-            textToPhotoButton.heightAnchor.constraint(equalToConstant: 30),
+            textToPhotoLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            textToPhotoLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,constant: 110),
+            textToPhotoLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -110),
+            textToPhotoLabel.heightAnchor.constraint(equalToConstant: 30),
             
-            textView.topAnchor.constraint(equalTo: textToPhotoButton.bottomAnchor, constant: 10),
+            textView.topAnchor.constraint(equalTo: textToPhotoLabel.bottomAnchor, constant: 10),
             textView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 30),
             textView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -30),
             textView.heightAnchor.constraint(equalToConstant: 150),

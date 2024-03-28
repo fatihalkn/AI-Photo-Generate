@@ -20,6 +20,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="minus.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="SVZ-lj-vNK">
                                 <rect key="frame" x="76" y="233" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.29019607843137252" green="0.19607843137254902" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" systemColor="darkTextColor"/>
                             </imageView>
                         </subviews>

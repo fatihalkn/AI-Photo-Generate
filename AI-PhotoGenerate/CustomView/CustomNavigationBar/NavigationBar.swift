@@ -20,7 +20,7 @@ extension UIViewController {
         let rightSettingsButton = UIBarButtonItem(image: rightButtonİmageFirst,
                                                   style: .done,
                                                   target: self,
-                                                  action: nil)
+                                                  action: #selector(rightSettingsButtonTapped))
         let proRightBarButton = CustomButtons(title: rightTitle,
                                               titleColor: .rgb,
                                               font: .systemFont(ofSize: 18, weight: .bold),
@@ -35,8 +35,13 @@ extension UIViewController {
                                                     backroundColor: .clear)
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: creatNavigationLeftItem)
         
-        
+       
     }
+    @objc func rightSettingsButtonTapped() {
+        let vc = SetttingsViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     
     
 }

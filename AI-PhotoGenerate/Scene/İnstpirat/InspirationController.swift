@@ -7,10 +7,12 @@
 
 import Foundation
 import UIKit
+import GoogleMobileAds
 
-class InspirationController: UIViewController {
+class InspirationController: UIViewController, GADBannerViewDelegate {
     
     let ınspirationViewModel = InspirationViewModel()
+    var bannerView: GADBannerView!
     
     private let inspirationCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -24,18 +26,56 @@ class InspirationController: UIViewController {
         return collectionView
     }()
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .main
         setupUI()
+        setupBannerAdd()
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         navigationBarConfigure()
     }
+    
+    func bannerViewDidReceiveAd(_ bannerView: GADBannerView) {
+      addBannerViewToView(bannerView)
+    }
+    
+    func setupBannerAdd() {
+        let viewWidth = view.frame.inset(by: view.safeAreaInsets).width
+        let adaptiveSize = GADCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth(viewWidth)
+        bannerView = GADBannerView(adSize: adaptiveSize)
+        addBannerViewToView(bannerView)
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2435281174"
+        bannerView.rootViewController = self
+        bannerView.delegate = self
+        bannerView.load(GADRequest())
+        inspirationCollectionView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: adaptiveSize.size.height + 10, right: 10)
+    }
+    
+    func addBannerViewToView(_ bannerView: GADBannerView) {
+        bannerView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bannerView)
+        view.addConstraints(
+          [NSLayoutConstraint(item: bannerView,
+                              attribute: .bottom,
+                              relatedBy: .equal,
+                              toItem: view.safeAreaLayoutGuide,
+                              attribute: .bottom,
+                              multiplier: 1,
+                              constant: 0),
+           NSLayoutConstraint(item: bannerView,
+                              attribute: .centerX,
+                              relatedBy: .equal,
+                              toItem: view,
+                              attribute: .centerX,
+                              multiplier: 1,
+                              constant: 0)
+          ])
+       }
+       
+    
     
     func navigationBarConfigure() {
         self.configureItems(leftTitle: "AI Inspiration", rightTitle: "PRO", rightButtonİmageFirst: UIImage(systemName: "gear")!, rightBarButtonİmageSecont: UIImage(named: "star")!)

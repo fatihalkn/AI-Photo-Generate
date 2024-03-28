@@ -8,10 +8,12 @@
 import Foundation
 import UIKit
 import CoreData
+import GoogleMobileAds
 
-class HomePageController: UIViewController {
-    
+class HomePageController: UIViewController, GADBannerViewDelegate {
+    var bannerView: GADBannerView!
     let homeViewModel = HomeViewModel()
+    let rewardedAdHelper = RewardedAdHelper()
     
      let textView: UITextView = {
         let textView = UITextView()
@@ -78,23 +80,35 @@ class HomePageController: UIViewController {
     
     
     
-    private let supriseMeButton = CustomButtons(title: "Suprise me",
-                                                titleColor: .rgb,
-                                                font: .systemFont(ofSize: 12, weight: .bold),
-                                                backroundColor: .texToPhoto)
-    
-    private let seeAllButton = CustomButtons(title: "See all >",
-                                             titleColor: .rgb,
-                                             font: .systemFont(ofSize: 15, weight: .bold),
-                                             backroundColor: nil)
-    private let createButton = CustomButtons(title: "Create >",
-                                             titleColor: .rgb,
-                                             font: .systemFont(ofSize: 20, weight: .bold),
-                                             backroundColor: .button)
-    private let clearButton = CustomButtons(title: "Clear Text",
-                                            titleColor: .rgb,
-                                            font: .systemFont(ofSize: 10, weight: .thin),
-                                            backroundColor: .texToPhoto)
+    private let supriseMeButton: CustomButtons = {
+        let gradientColors: [CGColor] = [UIColor.rgb.cgColor, UIColor.clear.cgColor]
+        return CustomButtons(title: "Suprise me",
+                             titleColor: .rgb,
+                             font: .systemFont(ofSize: 12, weight: .bold),
+                             gradientColors: gradientColors)
+    }()
+
+    private let seeAllButton: CustomButtons = {
+        return CustomButtons(title: "See all >",
+                             titleColor: .rgb,
+                             font: .systemFont(ofSize: 15, weight: .bold))
+    }()
+
+    private let createButton: CustomButtons = {
+        let gradientColors: [CGColor] = [UIColor.systemPink.cgColor, UIColor.purple.cgColor]
+        return CustomButtons(title: "Create >",
+                             titleColor: .rgb,
+                             font: .systemFont(ofSize: 20, weight: .bold),
+                             gradientColors: gradientColors)
+    }()
+
+    private let clearButton: CustomButtons = {
+        return CustomButtons(title: "Clear Text",
+                             titleColor: .white,
+                             font: .systemFont(ofSize: 10, weight: .thin),
+                             backroundColor: .button)
+    }()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -104,6 +118,9 @@ class HomePageController: UIViewController {
         setupRegister()
         setupDelegate()
         buttonsTarget()
+        setupBannerAdd()
+        rewardedAdHelper.loadRewardedAd()
+    
     }
     
     override func viewDidLayoutSubviews() {
@@ -124,6 +141,41 @@ class HomePageController: UIViewController {
         view.addSubview(clearButton)
         view.backgroundColor = UIColor(named: "mainColor")
     }
+    
+    func setupBannerAdd() {
+        let viewWidth = view.frame.inset(by: view.safeAreaInsets).width
+
+           let adaptiveSize = GADCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth(viewWidth)
+           bannerView = GADBannerView(adSize: adaptiveSize)
+
+           addBannerViewToView(bannerView)
+        
+          bannerView.adUnitID = "ca-app-pub-3940256099942544/2435281174"
+          bannerView.rootViewController = self
+          bannerView.delegate = self
+          bannerView.load(GADRequest())
+    }
+    
+    func addBannerViewToView(_ bannerView: GADBannerView) {
+        bannerView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bannerView)
+        view.addConstraints(
+          [NSLayoutConstraint(item: bannerView,
+                              attribute: .bottom,
+                              relatedBy: .equal,
+                              toItem: view.safeAreaLayoutGuide,
+                              attribute: .bottom,
+                              multiplier: 1,
+                              constant: 0),
+           NSLayoutConstraint(item: bannerView,
+                              attribute: .centerX,
+                              relatedBy: .equal,
+                              toItem: view,
+                              attribute: .centerX,
+                              multiplier: 1,
+                              constant: 0)
+          ])
+       }
     
     func setupRegister() {
         styleCollectionView.register(SelectStyleCell.self, forCellWithReuseIdentifier:SelectStyleCell.identifier)
@@ -150,10 +202,12 @@ class HomePageController: UIViewController {
         } else {
             textView.text = "A near fatal hot chocolate accident."
         }
+        
     }
     
     @objc func clickedCreateButton() {
-        if !homeViewModel.isTextViewEmpty(textView.text) { 
+        rewardedAdHelper.showRewardedAd(viewController: self)
+        if !homeViewModel.isTextViewEmpty(textView.text) {
             self.textView.shake()
             self.promptTitleLabel.shake()
             self.supriseMeButton.shake()
@@ -196,8 +250,11 @@ class HomePageController: UIViewController {
         print("See all butonuna bastın")
     }
     
+    
     @objc func clearButtonTapped() {
         textView.text = ""
+       
+
     }
     
     func setupRadius() {
@@ -344,7 +401,7 @@ extension HomePageController {
             styleCollectionView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -30),
             styleCollectionView.heightAnchor.constraint(equalToConstant: 150),
             
-            createButton.topAnchor.constraint(equalTo: styleCollectionView.bottomAnchor,constant: 150),
+            createButton.topAnchor.constraint(equalTo: styleCollectionView.bottomAnchor,constant: 140),
             createButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,constant: 30),
             createButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -30),
             createButton.heightAnchor.constraint(equalToConstant: 60),

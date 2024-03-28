@@ -44,7 +44,6 @@ class TableViewHeader: UIView {
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         imageView.image = .for
-        imageView.layer.cornerRadius = 16
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -54,7 +53,6 @@ class TableViewHeader: UIView {
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         imageView.image = .ads
-        imageView.layer.cornerRadius = 16
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -71,9 +69,24 @@ class TableViewHeader: UIView {
         return imageView
     }()
     
+    
+    private let proButton: CustomButtons = {
+        let gradientColors: [CGColor] = [UIColor.systemPink.cgColor, UIColor.blue.cgColor]
+        return CustomButtons(title: "✨PRO",
+                             titleColor: .white,
+                             font: .systemFont(ofSize: 15, weight: .regular),
+                             gradientColors: gradientColors)
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
+    }
+    
+    override func  layoutSubviews() {
+        super.layoutSubviews()
+        proButton.layer.cornerRadius = proButton.frame.height / 2
+        proButton.clipsToBounds = true
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -87,6 +100,7 @@ class TableViewHeader: UIView {
         addSubview(unlimitedLabel)
         addSubview(removeAdsİmage)
         addSubview(unlimitedİmage)
+        addSubview(proButton)
         setupCons()
         
     }
@@ -101,12 +115,13 @@ extension TableViewHeader {
     func setupCons() {
         NSLayoutConstraint.activate([
             headerImageView.topAnchor.constraint(equalTo: topAnchor),
-            headerImageView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            headerImageView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            headerImageView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            headerImageView.leadingAnchor.constraint(equalTo: leadingAnchor,constant: 10),
+            headerImageView.trailingAnchor.constraint(equalTo: trailingAnchor,constant: -10),
+            headerImageView.bottomAnchor.constraint(equalTo: bottomAnchor,constant: -20),
             
             headerTitleLabel.topAnchor.constraint(equalTo:headerImageView.topAnchor,constant: 10),
             headerTitleLabel.leadingAnchor.constraint(equalTo: headerImageView.leadingAnchor,constant: 10),
+            headerTitleLabel.trailingAnchor.constraint(equalTo: headerImageView.trailingAnchor,constant: -10),
             headerTitleLabel.heightAnchor.constraint(equalToConstant: 20),
             
             unlimitedİmage.topAnchor.constraint(equalTo: headerTitleLabel.bottomAnchor,constant: 20),
@@ -114,6 +129,7 @@ extension TableViewHeader {
             
             unlimitedLabel.topAnchor.constraint(equalTo: headerTitleLabel.bottomAnchor, constant: 25),
             unlimitedLabel.leadingAnchor.constraint(equalTo: unlimitedİmage.trailingAnchor,constant: 10),
+            unlimitedLabel.trailingAnchor.constraint(lessThanOrEqualTo: headerImageView.trailingAnchor,constant: -40),
             unlimitedLabel.heightAnchor.constraint(equalToConstant: 18),
             
             removeAdsİmage.topAnchor.constraint(equalTo: unlimitedİmage.bottomAnchor, constant: 20),
@@ -121,7 +137,14 @@ extension TableViewHeader {
             
             removeAdsLabel.topAnchor.constraint(equalTo: unlimitedLabel.bottomAnchor, constant: 32),
             removeAdsLabel.leadingAnchor.constraint(equalTo: removeAdsİmage.trailingAnchor,constant: 10),
-            removeAdsLabel.heightAnchor.constraint(equalToConstant: 18)
+            removeAdsLabel.trailingAnchor.constraint(lessThanOrEqualTo: headerImageView.trailingAnchor,constant: -40),
+            removeAdsLabel.heightAnchor.constraint(equalToConstant: 18),
+            
+            proButton.topAnchor.constraint(equalTo: removeAdsLabel.bottomAnchor,constant: 20),
+            proButton.leadingAnchor.constraint(equalTo: headerImageView.leadingAnchor,constant: 10),
+            proButton.trailingAnchor.constraint(greaterThanOrEqualTo: headerImageView.trailingAnchor,constant: -250),
+            proButton.heightAnchor.constraint(equalToConstant: 40),
+            
 
             
 

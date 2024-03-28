@@ -24,10 +24,15 @@ class InspirationCell: UICollectionViewCell {
        return imageView
    }()
    
-    let tryButton = CustomButtons(title: "Try",
-                                  titleColor: .white,
-                                  font: .systemFont(ofSize: 13, weight: .bold),
-                                  backroundColor: .blackgray)
+
+    private let tryButton: CustomButtons = {
+        let gradientColors: [CGColor] = [UIColor.label.cgColor, UIColor.purple.cgColor]
+        return CustomButtons(title: "Try",
+                             titleColor: .rgb,
+                             font: .systemFont(ofSize: 13, weight: .bold),
+                             gradientColors: gradientColors)
+    }()
+    
     
     //MARK: - Properties
     var indexPath: IndexPath?

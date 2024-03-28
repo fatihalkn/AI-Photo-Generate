@@ -54,7 +54,16 @@ class DetailController: UIViewController {
         return detailView
     }()
     
-    let tryButton = CustomButtons(title: "Try this 🤩",backroundColor: .button)
+//    let tryButton = CustomButtons(title: "Try this 🤩",backroundColor: .button)
+    
+    private let tryButton: CustomButtons = {
+        let gradientColors: [CGColor] = [UIColor.systemPink.cgColor, UIColor.purple.cgColor]
+        return CustomButtons(title: "Try this 🤩",
+                             titleColor: .rgb,
+                             font: .systemFont(ofSize: 13, weight: .bold),
+                             gradientColors: gradientColors)
+    }()
+    
     
     let copyButton = CustomButtons(image: .cop)
     

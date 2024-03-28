@@ -50,10 +50,15 @@
 		3D763BFA2BB178F800E0D032 /* MyArtCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763BF92BB178F800E0D032 /* MyArtCell.swift */; };
 		3D763BFC2BB2C9D200E0D032 /* MyArtCollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763BFB2BB2C9D200E0D032 /* MyArtCollectionViewItem.swift */; };
 		3D763BFF2BB32D4C00E0D032 /* SetttingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763BFE2BB32D4C00E0D032 /* SetttingsViewController.swift */; };
-		3D763C032BB330A400E0D032 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763C022BB330A400E0D032 /* SettingsModel.swift */; };
 		3D763C052BB330E000E0D032 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763C042BB330E000E0D032 /* SettingsViewModel.swift */; };
 		3D763C092BB365CE00E0D032 /* SettingsElementsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763C082BB365CE00E0D032 /* SettingsElementsCell.swift */; };
 		3D763C0D2BB36BF200E0D032 /* TableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763C0C2BB36BF200E0D032 /* TableViewHeader.swift */; };
+		3D763C0F2BB4C86C00E0D032 /* GradiantColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763C0E2BB4C86C00E0D032 /* GradiantColor.swift */; };
+		3D763C112BB590C700E0D032 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763C102BB590C700E0D032 /* SettingsModel.swift */; };
+		3D763C172BB5A32100E0D032 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 3D763C162BB5A32100E0D032 /* GoogleMobileAds */; };
+		3D763C1B2BB5B46F00E0D032 /* RewardedAdHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763C1A2BB5B46F00E0D032 /* RewardedAdHelper.swift */; };
+		3D763C1E2BB5C22600E0D032 /* PayWallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763C1D2BB5C22600E0D032 /* PayWallViewController.swift */; };
+		3D763C202BB5C26000E0D032 /* PayWallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D763C1F2BB5C26000E0D032 /* PayWallViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -112,10 +117,14 @@
 		3D763BF92BB178F800E0D032 /* MyArtCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyArtCell.swift; sourceTree = "<group>"; };
 		3D763BFB2BB2C9D200E0D032 /* MyArtCollectionViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyArtCollectionViewItem.swift; sourceTree = "<group>"; };
 		3D763BFE2BB32D4C00E0D032 /* SetttingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetttingsViewController.swift; sourceTree = "<group>"; };
-		3D763C022BB330A400E0D032 /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
 		3D763C042BB330E000E0D032 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		3D763C082BB365CE00E0D032 /* SettingsElementsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsElementsCell.swift; sourceTree = "<group>"; };
 		3D763C0C2BB36BF200E0D032 /* TableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHeader.swift; sourceTree = "<group>"; };
+		3D763C0E2BB4C86C00E0D032 /* GradiantColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradiantColor.swift; sourceTree = "<group>"; };
+		3D763C102BB590C700E0D032 /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
+		3D763C1A2BB5B46F00E0D032 /* RewardedAdHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardedAdHelper.swift; sourceTree = "<group>"; };
+		3D763C1D2BB5C22600E0D032 /* PayWallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayWallViewController.swift; sourceTree = "<group>"; };
+		3D763C1F2BB5C26000E0D032 /* PayWallViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayWallViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +134,7 @@
 			files = (
 				3D763BB32BAB347F00E0D032 /* ProgressHUD in Frameworks */,
 				3D763BEE2BB0C7F200E0D032 /* CoreData.framework in Frameworks */,
+				3D763C172BB5A32100E0D032 /* GoogleMobileAds in Frameworks */,
 				3D763BCF2BADA50300E0D032 /* AlamofireDynamic in Frameworks */,
 				3D763BCD2BADA50300E0D032 /* Alamofire in Frameworks */,
 			);
@@ -154,6 +164,7 @@
 		3D763B6B2BA8D34000E0D032 /* AI-PhotoGenerate */ = {
 			isa = PBXGroup;
 			children = (
+				3D763C182BB5B45000E0D032 /* Adds */,
 				3D763BF62BB0CFB100E0D032 /* CoreDAta */,
 				3D763BAE2BAB323300E0D032 /* Extantion+UIView */,
 				3D763BA02BA9E98E00E0D032 /* CustomCells */,
@@ -240,7 +251,7 @@
 				3D763BC02BAC82E600E0D032 /* SupriseModel.swift */,
 				3D763BDA2BADC1A300E0D032 /* InspirationModel.swift */,
 				3D763BDE2BADDF8900E0D032 /* PopularAIModel.swift */,
-				3D763C022BB330A400E0D032 /* SettingsModel.swift */,
+				3D763C102BB590C700E0D032 /* SettingsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -248,6 +259,7 @@
 		3D763B982BA8D3B800E0D032 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				3D763C1C2BB5C21000E0D032 /* PayWall */,
 				3D763BFD2BB32D3800E0D032 /* Settings */,
 				3D763BE02BADE27900E0D032 /* Detail */,
 				3D763BD32BADAF2400E0D032 /* MyArt */,
@@ -304,6 +316,7 @@
 			children = (
 				3D763BAF2BAB346D00E0D032 /* ProgresHud.swift */,
 				3D763BBE2BAC6CC500E0D032 /* Shake.swift */,
+				3D763C0E2BB4C86C00E0D032 /* GradiantColor.swift */,
 			);
 			name = "Extantion+UIView";
 			path = "Extantion+UIVİEW";
@@ -372,6 +385,31 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		3D763C182BB5B45000E0D032 /* Adds */ = {
+			isa = PBXGroup;
+			children = (
+				3D763C192BB5B45D00E0D032 /* RewardedAdHelper */,
+			);
+			path = Adds;
+			sourceTree = "<group>";
+		};
+		3D763C192BB5B45D00E0D032 /* RewardedAdHelper */ = {
+			isa = PBXGroup;
+			children = (
+				3D763C1A2BB5B46F00E0D032 /* RewardedAdHelper.swift */,
+			);
+			path = RewardedAdHelper;
+			sourceTree = "<group>";
+		};
+		3D763C1C2BB5C21000E0D032 /* PayWall */ = {
+			isa = PBXGroup;
+			children = (
+				3D763C1D2BB5C22600E0D032 /* PayWallViewController.swift */,
+				3D763C1F2BB5C26000E0D032 /* PayWallViewModel.swift */,
+			);
+			path = PayWall;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -393,6 +431,7 @@
 				3D763BB22BAB347F00E0D032 /* ProgressHUD */,
 				3D763BCC2BADA50300E0D032 /* Alamofire */,
 				3D763BCE2BADA50300E0D032 /* AlamofireDynamic */,
+				3D763C162BB5A32100E0D032 /* GoogleMobileAds */,
 			);
 			productName = "AI-PhotoGenerate";
 			productReference = 3D763B692BA8D34000E0D032 /* AI-PhotoGenerate.app */;
@@ -425,6 +464,7 @@
 			packageReferences = (
 				3D763B9B2BA8D3E200E0D032 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				3D763BB12BAB347F00E0D032 /* XCRemoteSwiftPackageReference "ProgressHUD" */,
+				3D763C152BB5A32100E0D032 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
 			);
 			productRefGroup = 3D763B6A2BA8D34000E0D032 /* Products */;
 			projectDirPath = "";
@@ -453,6 +493,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D763B892BA8D38800E0D032 /* CustomButton.swift in Sources */,
+				3D763C0F2BB4C86C00E0D032 /* GradiantColor.swift in Sources */,
 				3D763C092BB365CE00E0D032 /* SettingsElementsCell.swift in Sources */,
 				3D763BA72BA9F9C000E0D032 /* TabBarController.swift in Sources */,
 				3D763BBD2BAC4A4B00E0D032 /* SeeAllViewModel.swift in Sources */,
@@ -461,11 +502,11 @@
 				3D763BD22BADAE5A00E0D032 /* InspirationController.swift in Sources */,
 				3D763BF82BB0CFC300E0D032 /* CoreDataModel.swift in Sources */,
 				3D763BBA2BAC45F200E0D032 /* SeeAllController.swift in Sources */,
+				3D763C202BB5C26000E0D032 /* PayWallViewModel.swift in Sources */,
 				3D763BD72BADBE4F00E0D032 /* InspirationCell.swift in Sources */,
 				3D763B9A2BA8D3B800E0D032 /* HomePageController.swift in Sources */,
 				3D763BAD2BAA316800E0D032 /* GenarateController.swift in Sources */,
 				3D763B972BA8D3AE00E0D032 /* PostModel.swift in Sources */,
-				3D763C032BB330A400E0D032 /* SettingsModel.swift in Sources */,
 				3D763BF52BB0CF4C00E0D032 /* MyArdViewModel.swift in Sources */,
 				3D763BB72BAC451900E0D032 /* GenareteViewModel.swift in Sources */,
 				3D763C052BB330E000E0D032 /* SettingsViewModel.swift in Sources */,
@@ -479,11 +520,14 @@
 				3D763BBF2BAC6CC500E0D032 /* Shake.swift in Sources */,
 				3D763BA42BA9EEEC00E0D032 /* StyleModel.swift in Sources */,
 				3D763BF12BB0C82500E0D032 /* GenerateImageDataModel.xcdatamodeld in Sources */,
+				3D763C1E2BB5C22600E0D032 /* PayWallViewController.swift in Sources */,
 				3D763B8C2BA8D3A300E0D032 /* Constant.swift in Sources */,
 				3D763B952BA8D3AE00E0D032 /* NetworkManager.swift in Sources */,
+				3D763C1B2BB5B46F00E0D032 /* RewardedAdHelper.swift in Sources */,
 				3D763BD92BADC18000E0D032 /* InspirationViewModel.swift in Sources */,
 				3D763BA92BAA312E00E0D032 /* HomeViewModel.swift in Sources */,
 				3D763C0D2BB36BF200E0D032 /* TableViewHeader.swift in Sources */,
+				3D763C112BB590C700E0D032 /* SettingsModel.swift in Sources */,
 				3D763BDB2BADC1A300E0D032 /* InspirationModel.swift in Sources */,
 				3D763B6F2BA8D34000E0D032 /* SceneDelegate.swift in Sources */,
 				3D763B942BA8D3AE00E0D032 /* NetworkHelper.swift in Sources */,
@@ -649,6 +693,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alkanfatih.AI-PhotoGenerate";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -677,6 +722,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alkanfatih.AI-PhotoGenerate";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -725,6 +771,14 @@
 				minimumVersion = 14.1.1;
 			};
 		};
+		3D763C152BB5A32100E0D032 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.2.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -740,6 +794,11 @@
 		3D763BCE2BADA50300E0D032 /* AlamofireDynamic */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = AlamofireDynamic;
+		};
+		3D763C162BB5A32100E0D032 /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3D763C152BB5A32100E0D032 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
 		};
 /* End XCSwiftPackageProductDependency section */
 

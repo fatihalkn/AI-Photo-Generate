@@ -32,7 +32,14 @@ class SeeAllController: UIViewController {
         return collectionView
     }()
     
-    private let contiuneButton = CustomButtons(title: "Contiune",titleColor: .white,font: .systemFont(ofSize: 15, weight: .bold),backroundColor: .button)
+    
+    private let contiuneButton: CustomButtons = {
+        let gradientColors: [CGColor] = [UIColor.systemPink.cgColor, UIColor.purple.cgColor]
+        return CustomButtons(title: "Contiune",
+                             titleColor: .rgb,
+                             font: .systemFont(ofSize: 20, weight: .bold),
+                             gradientColors: gradientColors)
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()

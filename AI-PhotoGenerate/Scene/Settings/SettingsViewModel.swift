@@ -9,12 +9,12 @@ import Foundation
 
 class SettingsViewModel {
     
-    var settingsData: [SettingsModel] = [.init(settingsItems: "X Paylaş"),
-                                         .init(settingsItems: "Bizi Takip Edin"),
-                                         .init(settingsItems: "X in Hakkınca"),
-                                         .init(settingsItems: "Bizi Değerlendirin"),
-                                         .init(settingsItems: "Satın Alma İşlemini Geri Yükle"),
-                                         .init(settingsItems: "Destek            af.aklakanfatih@gmail.com"),
-                                         .init(settingsItems: "Şartlar"),
-                                         .init(settingsItems: "Gizlilik")]
+    var settingsData: [SettingsItem] = [SettingsItem(type: .shareUs, title: "Share"),
+                                        SettingsItem(type: .followUs, title: "Follow Us"),
+                                        SettingsItem(type: .rateUs, title: "About X"),
+                                        SettingsItem(type: .restorePurchase, title: "Restore Purchase"),
+                                        SettingsItem(type: .support("af.alkanfatih@gmail.com"), title: "Support"),
+                                        SettingsItem(type: .terms, title: "Terms"),
+                                        SettingsItem(type: .privacyPolicy, title: "Privacy Policy")]
+
 }
